@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/relativeLayout"
+    tools:context=".MainActivity">
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:name="com.example.argame.CustomArFragment"
+        android:id="@+id/ar_fragment"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ballons left: 40"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/ballons_count_txt"
+        android:layout_margin="8dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0:0"
+        android:textSize="32sp"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="32sp"
+        android:textStyle="bold"
+        android:id="@+id/timertxt"/>
+    <View
+        android:layout_width="72dp"
+        android:layout_height="4dp"
+        android:background="#7a000000"
+        android:layout_centerInParent="true"/>
+    <View
+        android:layout_width="4dp"
+        android:layout_height="72dp"
+        android:background="#7a000000"
+        android:layout_centerInParent="true"/>
+
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:id="@+id/shootButton"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:text="Shoot"/>
+
+
+</RelativeLayout>
