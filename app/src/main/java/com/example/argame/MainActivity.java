@@ -36,23 +36,12 @@ public class MainActivity extends AppCompatActivity {
     private Camera camera;
     private ModelRenderable bulletRenderable;
     private boolean shouldStartTimer = true;
-    private int balloonsLeft = 40;
+    private int balloonsLeft = 20;
     private Point point;
     private TextView balloonsLeftTxt;
     private SoundPool soundPool;
     private int sound;
     private TextView timer;
-
-//    @Override
-//    public void onUserInteraction() {
-//        super.onUserInteraction();
-//        if (shouldStartTimer) {
-//                startTimer();
-//                shouldStartTimer = false;
-//            }
-//
-//            shoot();
-//    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -149,8 +138,9 @@ public class MainActivity extends AppCompatActivity {
                                 @Override
                                 public void onClick(DialogInterface dialogInterface, int i) {
                                     addBalloonsToScene();
-                                    balloonsLeft = 40;
+                                    balloonsLeft = 20;
                                     balloonsLeftTxt.setText("Balloons Left: 40");
+                                    shouldStartTimer = true;
                                 }
                             }).setNegativeButton("Exit game", new DialogInterface.OnClickListener() {
                                 @Override
@@ -243,7 +233,7 @@ public class MainActivity extends AppCompatActivity {
                 .build()
                 .thenAccept(renderable -> {
 
-                    for (int i = 0;i < 40;i++) {
+                    for (int i = 0;i < 20;i++) {
 
                         Node node = new Node();
                         node.setRenderable(renderable);
